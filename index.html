@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAPACINE - Cine y valoraciones</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #101116;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            padding: 25px 8%;
+            background: #191a22;
+            border-bottom: 1px solid #30313b;
+        }
+
+        header h1 {
+            color: #e5b85c;
+            font-size: 30px;
+        }
+
+        header p {
+            color: #999;
+            margin-top: 7px;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .buscador {
+            width: 100%;
+            padding: 15px;
+            background: #20212a;
+            border: 1px solid #393a45;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            margin: 25px 0;
+        }
+
+        .peliculas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .pelicula {
+            background: #1c1d26;
+            padding: 22px;
+            border-radius: 10px;
+            border: 1px solid #30313b;
+            transition: 0.2s;
+        }
+
+        .pelicula:hover {
+            transform: translateY(-5px);
+            border-color: #e5b85c;
+        }
+
+        .pelicula h2 {
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .pelicula p {
+            color: #aaa;
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .nota {
+            color: #e5b85c;
+            font-size: 23px;
+            font-weight: bold;
+            margin-top: 18px;
+        }
+
+        .categoria {
+            color: #e5b85c;
+            margin-bottom: 15px;
+        }
+
+        .mensaje {
+            color: #aaa;
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #777;
+        }
+        .boton-pelicula {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 11px 18px;
+    background: #e5b85c;
+    color: #101116;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.boton-pelicula:hover {
+    background: #f5d58b;
+    transform: scale(1.03);
+}
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>PAPACINE</h1>
+    <p>Explora el mundo del cine y sus valoraciones</p>
+</header>
+
+<main>
+
+    <h2>Catálogo de películas</h2>
+    <p class="categoria">Descubre, busca y consulta películas</p>
+
+    <input
+        type="text"
+        id="buscador"
+        class="buscador"
+        placeholder="Buscar película o director..."
+    >
+
+    <p id="mensaje" class="mensaje"></p>
+
+    <section class="peliculas" id="catalogo">
+    </section>
+
+</main>
+
+<footer>
+    PAPACINE - Proyecto independiente de cine
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+[
+    {
+        "id": "titanic-1997",
+        "titulo": "Titanic",
+        "anio": 1997,
+        "director": "James Cameron",
+        "categoria": "Drama",
+        "url": "https://ok.ru/video/7360378964648",
+        "valoraciones": [
+            {
+                "fuente": "TMDB",
+                "nota": null,
+                "tipo": "usuarios"
+            }
+        ]
+    }
+]
